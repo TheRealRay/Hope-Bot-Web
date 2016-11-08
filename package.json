@@ -1,0 +1,24 @@
+{
+  "name": "hope-bot-web",
+  "version": "1.0.0",
+  "description": "The website for Hope Bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRealRay/Hope-Bot-Web.git"
+  },
+  "keywords": [
+    "Hope",
+    "Bot",
+    "Website"
+  ],
+  "author": "Ray Chun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheRealRay/Hope-Bot-Web/issues"
+  },
+  "homepage": "https://github.com/TheRealRay/Hope-Bot-Web#readme"
+}
