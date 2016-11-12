@@ -10,6 +10,11 @@
         <div id="layout">
             <header>Home of Hope Bot</header>
             <div id="entries">
+                <ul>
+                    <% entries.forEach(function(entry) { %>
+                        <li><%= entry.entryText %> - <%= entry.timestamp %></li>
+                    <% }); %>
+                </ul>
             </div>
             <footer>Made by Ray Chun MIT</footer>
         </div>

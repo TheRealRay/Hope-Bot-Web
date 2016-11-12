@@ -1,4 +1,6 @@
-var config = require("../../config");
+var config = require("../config");
+var logger = require("../utils/loggingUtils");
+var mongoClient = require("mongodb").MongoClient;
 
 exports.findEntriesByID = function (id, date, callback) {
     mongoClient.connect(config.MONGO_URL, function (error, db) {
@@ -7,17 +9,17 @@ exports.findEntriesByID = function (id, date, callback) {
                 userID: id
             };
 
-            db.collection(collectionName).find(query).toArray(function (error, docs) {
+            db.collection(config.DIARY_ENTRIES).find(query).toArray(function (error, docs) {
                 if (!error) {
-                    console.log("Found documents!");
+                    logger.info("Found documents!");
                     callback(null, docs);
                 } else {
-                    console.log("could not find documents");
+                    logger.error("could not find documents");
                     callback(error, null);
                 }
             });
         } else {
-            console.log("Error connecting to db");
+            logger.error("Error connecting to db");
             callback(error, null);
         }
     });
