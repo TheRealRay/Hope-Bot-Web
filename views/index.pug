@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Hope Bot
+    link(rel='stylesheet' href='/css/style.css')
+    body
+      div(id="layout")
+        header Home of Hope Bot
+        div(id="entries")
+          ul
+            each entry in entries
+              li= entry.entryText + ' - ' + entry.timestamp
+        footer Made by Ray Chun MIT

@@ -17,11 +17,19 @@
         "react"
     ],
     "rules": {
-        "indent": ["error", 4],
+        "indent": ["error", 2],
         "linebreak-style": ["error", "unix"],
-        "quotes": ["error", "double"],
+        "quotes": ["error", "single"],
         "semi": ["error", "always"],
-        "curly": ["error", "all"],
-        "func-style": ["error", "expression"]
+        "space-before-blocks": "error",
+        "keyword-spacing": ["error", { "before": true }],
+        "space-infix-ops": "error",
+        "padded-blocks": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "never"
+        }],
+        "max-len": ["error", 80]
     }
 }
